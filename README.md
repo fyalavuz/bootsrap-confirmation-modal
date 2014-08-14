@@ -6,6 +6,7 @@ confirmation dialog boxes for bootsrap
 
 Example Using
 
+```javascript
 var cd = new confirmationDialog();
 cd.options.title = 'Are you';
 cd.options.text = 'sure?';
@@ -16,3 +17,4 @@ cd.cancelCallback = function() { console.log('cancelCallback') };
 // Optional Config
 cd.confirmButtonText = 'OKKKKKKK!!';
 cd.cancelButtonText = 'CANCEELLL!!';
+```
