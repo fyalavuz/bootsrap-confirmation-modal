@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bootstrap Confirmation Dialog</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-confirmation-modal-min.js"></script>
+
+    <script>
+        $(function() {
+            var cd = new confirmationDialog();
+            cd.options.title = 'Are you';
+            cd.options.text = 'sure?';
+            cd.confirmCallback = function() { console.log('confirmCallback') };
+            cd.cancelCallback = function() { console.log('cancelCallback') };
+
+            $('#launchModal').click(function() {
+                cd.show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="launchModal" class="btn btn-primary btn-lg">Launch demo modal</button>
+</body>
+</html>
